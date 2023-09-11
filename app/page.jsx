@@ -261,7 +261,7 @@ export default function Page() {
                       Submit
                     </button>
                   </form>
-                  <div className="flex justify-center lg:pl-8 gap-4 pt-4 text-gray-300 text-xs">
+                  <div className="flex justify-center pl-8 gap-4 pt-4 text-gray-300 text-xs">
                     <div className="hover:text-blue-300 cursor-pointer">
                       Terms & Conditions
                     </div>

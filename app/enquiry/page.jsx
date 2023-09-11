@@ -6,7 +6,7 @@ export default function page() {
   return (
     <>
       <section
-        className="w-screen h-screen flex justify-center items-center bg-cover bg-center"
+        className="w-screen h-screen flex justify-center items-center bg-cover bg-center pb-16 sm:pb-0"
         style={{ backgroundImage: 'url("/Back2.png")' }}
       >
         <div className="w-[820px] h-fit sm:h-[550px] shadow-xl rounded-3xl backdrop-blur-sm bg-black/20 flex flex-col items-center relative mb-8 sm:mb-0">
@@ -86,7 +86,7 @@ export default function page() {
             </a>
           </div>
           {/* Positioned the div at the bottom */}
-          <div className="sm:absolute mt-4 sm:mt-0 mb-2 sm:mb-0  sm:bottom-8 sm:left-1/2 sm:transform sm:-translate-x-1/2 text-center">
+          <div className="sm:absolute mt-4 sm:mt-0 sm:mb-0  sm:bottom-8 sm:left-1/2 sm:transform sm:-translate-x-1/2 text-center">
             <div className="flex gap-4 relative text-white font-light">
               <button className="px-3 py-1 rounded-2xl transition hover:backdrop-blur-sm hover:bg-white/40">
                 About Us
