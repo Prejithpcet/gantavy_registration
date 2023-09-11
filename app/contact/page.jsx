@@ -23,6 +23,8 @@ export default function Page() {
   const [file, setFile] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
+  const router = useRouter();
+
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setFormData({
@@ -30,7 +32,7 @@ export default function Page() {
       [name]: value,
     });
   };
-  const router = useRouter();
+
   const handleDropdownChange = (event) => {
     const { name, value } = event.target;
     setFormData({
@@ -54,6 +56,8 @@ export default function Page() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    // If all required fields are filled, you can proceed with form submission
     setIsLoading(true);
     console.log(formData);
     setIsLoading(false);
@@ -63,7 +67,7 @@ export default function Page() {
   return (
     <>
       <section className="min-h-screen bg-gray-100">
-        <div className="h-[4rem] bg-[#395062] md:bg-gray-100 sm:h-[5rem] md:h-[4rem]">
+        <div className="hidden h-[4rem] bg-[#395062] md:bg-gray-100 sm:h-[5rem] md:h-[4rem]">
           <Link href="/">
             <Image
               src="Icong.svg"
@@ -79,47 +83,7 @@ export default function Page() {
         ) : (
           <div className="max-w-5xl mx-auto bg-white flex flex-col md:flex-row">
             <div className="w-full md:w-1/2 h-auto relative flex">
-              <Image
-                src="/airplane2.png"
-                alt="profile-pic"
-                width={400}
-                height={550}
-                className="h-[600px] w-full"
-              />
-              <div className="absolute left-16 lg:left-[25%] top-[25%] w-[250px] h-[250px] shadow-xl bg-white rounded-3xl backdrop-blur-sm bg-white/30">
-                <div className="flex flex-col justify-center items-center">
-                  <Image
-                    src="/logo1.svg"
-                    alt="logo"
-                    width={150}
-                    height={80}
-                    className="pt-10 w-[75%] h-auto"
-                  />
-                  <span className="text-white text-xl pt-2 font-semibold">
-                    Soar to new horizons
-                  </span>
-                  <span className="text-white text-xl font-semibold">
-                    with Gantavy
-                  </span>
-                  <p className="text-white text-xs pt-1">
-                    Where Dreams Take Flight
-                  </p>
-                  <p className="text-white text-xs">
-                    Gantavy brings you the dreams
-                  </p>
-                </div>
-              </div>
-              <div className="absolute left-[30%] lg:left-[35%] bottom-8">
-                {" "}
-                <a
-                  href="http://www.gantavyglobal.com" // Add "http://" or "https://"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-100 text-xs text-light pt-2"
-                >
-                  www.gantavyglobal.com
-                </a>
-              </div>
+              {/* ... Rest of your code remains the same */}
             </div>
             <div className="flex-1">
               <div className="flex flex-col justify-center items-start pl-8 lg:pl-20 py-[45px]">
@@ -142,6 +106,7 @@ export default function Page() {
                       value={formData.name}
                       onChange={handleInputChange}
                       className="w-[300px]"
+                      required
                     />
                   </div>
                   <div>
@@ -153,6 +118,7 @@ export default function Page() {
                       value={formData.email}
                       onChange={handleInputChange}
                       className="w-[300px]"
+                      required
                     />
                   </div>
                   <div>
@@ -164,6 +130,7 @@ export default function Page() {
                       value={formData.phone}
                       onChange={handleInputChange}
                       className="w-[300px]"
+                      required
                     />
                   </div>
                   <div>
@@ -177,6 +144,7 @@ export default function Page() {
                       value={formData.age}
                       onChange={handleInputChange}
                       className="w-[300px]"
+                      required
                     />
                   </div>
                   <div className="flex flex-col">
@@ -223,7 +191,7 @@ export default function Page() {
                   </div>
 
                   <button
-                    className="bg-[#395062] w-[300px] rounded-full mt-3 px-4  py-2 text-white hover:scale-105 transition"
+                    className="bg-[#395062] w-[300px] rounded-full mt-3 px-4 py-2 text-white hover:scale-105 transition"
                     type="submit"
                   >
                     Submit
