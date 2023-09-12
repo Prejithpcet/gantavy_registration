@@ -262,13 +262,26 @@ export default function Page() {
                     </button>
                   </form>
                   <div className="flex justify-center pl-8 gap-4 pt-4 text-gray-300 text-xs">
-                    <div className="hover:text-blue-300 cursor-pointer">
-                      Terms & Conditions
-                    </div>
+                    <a
+                      href="https://gantavyglobal.com/terms-and-conditions/" // Add "http://" or "https://"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <div className="hover:text-blue-300 cursor-pointer">
+                        Terms & Conditions
+                      </div>
+                    </a>
+
                     <div>|</div>
-                    <div className="hover:text-blue-300 cursor-pointer">
-                      Privacy Policy
-                    </div>
+                    <a
+                      href="https://gantavyglobal.com/privacy-policy/" // Add "http://" or "https://"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <div className="hover:text-blue-300 cursor-pointer">
+                        Privacy Policy
+                      </div>
+                    </a>
                   </div>
                 </div>
               </div>

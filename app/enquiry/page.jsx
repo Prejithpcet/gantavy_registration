@@ -30,9 +30,11 @@ export default function page() {
               in the near future.
             </span>
           </div>
-          <div className="sm:relative pt-16 w-full sm:flex sm:pl-0 flex flex-col justify-center items-center gap-8">
+          <div className="sm:relative pt-12 sm:pt-16 w-full sm:flex sm:pl-0 flex flex-col justify-center items-center gap-8">
             <a
-              href="#"
+              href="https://www.applyboard.com/partners/1332424/intake-form"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-[325px] sm:absolute sm:left-1/2 sm:-translate-x-1/2"
             >
               <button className="flex gap-3 px-3 py-1 rounded-2xl transition hover:backdrop-blur-sm hover:bg-white/40">
@@ -46,7 +48,12 @@ export default function page() {
                 </div>
               </button>
             </a>
-            <a href="#" className="w-[325px] sm:absolute sm:left-16 sm:top-32">
+            <a
+              href="https://gantavyglobal.com/business-immigration-page/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-[325px] sm:absolute sm:left-16 sm:top-32"
+            >
               <button className="flex gap-3 px-3 py-1 rounded-2xl transition hover:backdrop-blur-sm hover:bg-white/40">
                 <Image
                   src="/Icon2.svg"
@@ -65,7 +72,12 @@ export default function page() {
                 </div>
               </button>
             </a>
-            <a href="#" className="w-[325px] sm:absolute sm:right-16 sm:top-32">
+            <a
+              href="https://gantavyglobal.com/contact/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-[325px] sm:absolute sm:right-16 sm:top-32"
+            >
               <button className="flex gap-3 px-3 py-1 rounded-2xl transition hover:backdrop-blur-sm hover:bg-white/40">
                 <Image
                   src="/Icon3.svg"
@@ -88,17 +100,35 @@ export default function page() {
           {/* Positioned the div at the bottom */}
           <div className="sm:absolute mt-4 sm:mt-0 sm:mb-0  sm:bottom-8 sm:left-1/2 sm:transform sm:-translate-x-1/2 text-center">
             <div className="flex gap-4 relative text-white font-light">
-              <button className="px-3 py-1 rounded-2xl transition hover:backdrop-blur-sm hover:bg-white/40">
-                About Us
-              </button>
+              <a
+                href="https://gantavyglobal.com/about/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="px-3 py-2 sm:py-1 rounded-2xl transition hover:backdrop-blur-sm hover:bg-white/40">
+                  About Us
+                </button>
+              </a>
               <div>|</div>
-              <button className="px-3 py-1 rounded-2xl transition hover:backdrop-blur-sm hover:bg-white/40">
-                FAQ
-              </button>
+              <a
+                href="https://gantavyglobal.com/faq/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="px-3 py-1 rounded-2xl transition hover:backdrop-blur-sm hover:bg-white/40">
+                  FAQ
+                </button>
+              </a>
               <div>|</div>
-              <button className="px-3 py-1 rounded-2xl transition hover:backdrop-blur-sm hover:bg-white/40">
-                Blog
-              </button>
+              <a
+                href="https://gantavyglobal.com/blog/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="px-3 py-1 rounded-2xl transition hover:backdrop-blur-sm hover:bg-white/40">
+                  Blog
+                </button>
+              </a>
             </div>
           </div>
         </div>

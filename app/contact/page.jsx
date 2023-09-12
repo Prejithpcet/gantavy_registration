@@ -198,9 +198,11 @@ export default function Page() {
                   </button>
                 </form>
                 <div className="flex gap-4 pt-4 text-gray-300 text-sm ">
-                  <div className="hover:text-blue-300 cursor-pointer">
-                    Terms & Conditions
-                  </div>
+                  <a href="">
+                    <div className="hover:text-blue-300 cursor-pointer">
+                      Terms & Conditions
+                    </div>
+                  </a>
                   <div>|</div>
                   <div className="hover:text-blue-300 cursor-pointer">
                     Privacy Policy
