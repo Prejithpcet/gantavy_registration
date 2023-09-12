@@ -9,7 +9,7 @@ export default function page() {
         className="w-screen h-screen flex justify-center items-center bg-cover bg-center pb-16 sm:pb-0"
         style={{ backgroundImage: 'url("/Back2.png")' }}
       >
-        <div className="w-[820px] h-fit sm:h-[550px] shadow-xl rounded-3xl backdrop-blur-sm bg-black/20 flex flex-col items-center relative mb-8 sm:mb-0">
+        <div className="w-[95%] sm:w-[850px] h-fit sm:h-[550px] shadow-xl rounded-3xl backdrop-blur-sm bg-black/20 flex flex-col items-center relative mb-8 sm:mb-0">
           {" "}
           {/* Added relative positioning to the outer div */}
           <Image
@@ -20,17 +20,17 @@ export default function page() {
             className="w-[40%] lg:w-[20%] h-auto pt-8"
           />
           <div className="pt-4 flex flex-col items-center">
-            <span className="text-white text-2xl sm:text-3xl font-semibold text-center">
+            <span className="text-white text-xl sm:text-3xl font-semibold text-center">
               We appreciate your inquiry!
             </span>
-            <span className="text-white text-2xl sm:text-3xl font-semibold text-center">
+            <span className="text-white text-xl sm:text-3xl font-semibold text-center">
               Expect a call from our representative{" "}
             </span>
-            <span className="text-white text-2xl sm:text-3xl font-semibold text-center">
+            <span className="text-white text-xl sm:text-3xl font-semibold text-center">
               in the near future.
             </span>
           </div>
-          <div className="sm:relative pt-12 sm:pt-16 w-full sm:flex sm:pl-0 flex flex-col justify-center items-center gap-8">
+          <div className="sm:relative pt-8 sm:pt-16 w-full sm:flex sm:pl-0 flex flex-col justify-center items-center gap-8">
             <a
               href="https://www.applyboard.com/partners/1332424/intake-form"
               target="_blank"
@@ -52,7 +52,7 @@ export default function page() {
               href="https://gantavyglobal.com/business-immigration-page/"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-[325px] sm:absolute sm:left-16 sm:top-32"
+              className="w-[325px] sm:absolute md:left-12 sm:left-16 sm:top-32"
             >
               <button className="flex gap-3 px-3 py-1 rounded-2xl transition hover:backdrop-blur-sm hover:bg-white/40">
                 <Image
@@ -76,7 +76,7 @@ export default function page() {
               href="https://gantavyglobal.com/contact/"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-[325px] sm:absolute sm:right-16 sm:top-32"
+              className="w-[325px] sm:absolute md:right-12 sm:right-16 sm:top-32"
             >
               <button className="flex gap-3 px-3 py-1 rounded-2xl transition hover:backdrop-blur-sm hover:bg-white/40">
                 <Image
@@ -98,7 +98,7 @@ export default function page() {
             </a>
           </div>
           {/* Positioned the div at the bottom */}
-          <div className="sm:absolute mt-4 sm:mt-0 sm:mb-0  sm:bottom-8 sm:left-1/2 sm:transform sm:-translate-x-1/2 text-center">
+          <div className="sm:absolute mt-4 sm:mt-0 mb-2 sm:mb-0 sm:bottom-8 sm:left-1/2 sm:transform sm:-translate-x-1/2 text-center">
             <div className="flex gap-4 relative text-white font-light">
               <a
                 href="https://gantavyglobal.com/about/"
