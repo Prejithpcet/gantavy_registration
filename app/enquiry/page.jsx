@@ -17,16 +17,16 @@ export default function page() {
             alt="logo"
             width={150}
             height={80}
-            className="w-[40%] lg:w-[20%] h-auto pt-8"
+            className="w-[40%] lg:w-[25%] h-auto pt-8"
           />
           <div className="pt-4 flex flex-col items-center">
-            <span className="text-white text-xl sm:text-3xl font-semibold text-center">
+            <span className="text-white text-xl sm:text-2xl font-semibold text-center">
               We appreciate your inquiry!
             </span>
-            <span className="text-white text-xl sm:text-3xl font-semibold text-center">
+            <span className="text-white text-xl sm:text-2xl font-semibold text-center">
               Expect a call from our representative{" "}
             </span>
-            <span className="text-white text-xl sm:text-3xl font-semibold text-center">
+            <span className="text-white text-xl sm:text-2xl font-semibold text-center">
               in the near future.
             </span>
           </div>
@@ -142,7 +142,7 @@ export default function page() {
             href="http://www.gantavyglobal.com" // Add "http://" or "https://"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white text-xs text-light"
+            className="text-white text-xs text-light text-opacity-75"
           >
             www.gantavyglobal.com
           </a>
