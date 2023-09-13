@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import {
   TextField,
@@ -10,6 +10,10 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 
+import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
+import { v4 } from "uuid";
+import { storage } from "./firebase";
+
 export default function page() {
   const [formData, setFormData] = useState({
     name: "",
@@ -17,9 +21,12 @@ export default function page() {
     phone: "",
     age: "",
     selectedOption: "",
+    imgUrl: "",
   });
+  useEffect(() => {
+    console.log("FormData:", formData);
+  }, [formData.imgUrl]);
   const [file, setFile] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -36,7 +43,6 @@ export default function page() {
       [name]: value,
     });
 
-    // Check if the selected value is "Student Visa"
     if (value === "Student Visa") {
       window.open(
         "https://www.applyboard.com/partners/1332424/intake-form",
@@ -50,11 +56,25 @@ export default function page() {
     setFile(selectedFile);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    setIsLoading(true);
     console.log(formData);
-    setIsLoading(false);
+    if (file) {
+      const imageRef = ref(storage, `/cv/${file.name + v4()}`);
+      try {
+        const snapshot = await uploadBytes(imageRef, file);
+        const downloadURL = await getDownloadURL(snapshot.ref);
+
+        setFormData((prevData) => ({
+          ...prevData,
+          imgUrl: downloadURL,
+        }));
+        alert("CV Uploaded");
+      } catch (error) {
+        console.error("Error uploading image:", error);
+        alert("Error uploading CV");
+      }
+    }
     router.push("/enquiry");
   };
   return (
@@ -90,10 +110,8 @@ export default function page() {
                 Gantavy brings you the dreams
               </p>
             </div>{" "}
-            {/* Adjust background color as needed */}
-            {/* Anchor tag centered and positioned 32px from the bottom */}
             <a
-              href="http://www.gantavyglobal.com" // Add "http://" or "https://"
+              href="http://www.gantavyglobal.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white text-xs font-light absolute bottom-[32px]"
@@ -252,7 +270,7 @@ export default function page() {
           </form>
           <div className="flex justify-center gap-4 pt-4 text-gray-300 text-xs">
             <a
-              href="https://gantavyglobal.com/terms-and-conditions/" // Add "http://" or "https://"
+              href="https://gantavyglobal.com/terms-and-conditions/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -263,7 +281,7 @@ export default function page() {
 
             <div>|</div>
             <a
-              href="https://gantavyglobal.com/privacy-policy/" // Add "http://" or "https://"
+              href="https://gantavyglobal.com/privacy-policy/"
               target="_blank"
               rel="noopener noreferrer"
             >
